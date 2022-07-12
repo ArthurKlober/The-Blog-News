@@ -95,7 +95,6 @@ button:hover {
 /* PRINCIPAL NOTÍCIA  */
 
 .principalanuncio {
-  width: 1170px;
   display: flex;
   padding-left: 135px;
   padding-right: 135px;
@@ -155,7 +154,6 @@ button:hover {
 /* NOTICIAS */
 
 .noticias {
-  width: 1170px;
   display: flex;
   padding-left: 135px;
   padding-right: 135px;
@@ -227,7 +225,6 @@ button:hover {
 /* MINI NOTICIAS */
 
 .mininoticias {
-  width: 1170px;
   display: flex;
   padding-left: 135px;
   padding-right: 135px;
