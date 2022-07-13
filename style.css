@@ -18,6 +18,7 @@ header .cabecalho {
   display: flex;
   color: var(--white);
   background-color: var(--purple-bg);
+  max-width: 1170px;
 
   padding: 64px 135px;
 
@@ -27,6 +28,14 @@ header .cabecalho {
 
 header .logo:hover {
   cursor: pointer;
+}
+
+body {
+  background-color: var(--purple-bg);
+}
+
+.partebranca {
+  padding: 65px 0px;
 }
 
 .menu {
@@ -95,12 +104,10 @@ button:hover {
 /* PRINCIPAL NOTÍCIA  */
 
 .principalanuncio {
-  display: flex;
-  padding-left: 135px;
-  padding-right: 135px;
-  justify-content: space-between;
-
-  background-color: var(--purple-bg);
+  display: grid;
+  grid-template-areas: 'noticiaprinciapal imagemprincipal';
+  max-width: 1170px;
+  padding: 0px 135px;
 }
 
 .noticiaprincipal {
@@ -108,6 +115,7 @@ button:hover {
   height: 400px;
   letter-spacing: 0em;
   text-align: left;
+  grid-area: 'noticiaprincipal';
 }
 
 .noticiaprincipal h1 {
@@ -144,6 +152,10 @@ button:hover {
   margin-left: 8px;
 }
 
+.imagemprincipal {
+  grid-area: 'imagemprincipal';
+}
+
 /* DIVIDER */
 
 .divider {
@@ -154,11 +166,14 @@ button:hover {
 /* NOTICIAS */
 
 .noticias {
-  display: flex;
+  display: grid;
+  max-width: 1170px;
   padding-left: 135px;
   padding-right: 135px;
-  margin-top: 60px;
-  justify-content: space-between;
+
+  grid-template-areas:
+    'noticia01 noticiassemfoto'
+    'noticia01 noticiassemfoto';
 }
 
 .noticias p {
@@ -196,11 +211,14 @@ button:hover {
 
 .noticia01 {
   max-width: 570px;
+  margin-right: 20px;
+  grid-area: 'noticia01';
 }
 
 .noticia01 img {
-  width: 569px;
+  max-width: 569px;
   height: 342.43px;
+  grid-area: 'noticia01';
 }
 
 .noticia01 p {
@@ -213,6 +231,7 @@ button:hover {
 
 .noticiassemfoto {
   max-width: 500px;
+  grid-area: 'noticiassemfoto';
 }
 
 .noticiasemfoto01 {
@@ -225,11 +244,14 @@ button:hover {
 /* MINI NOTICIAS */
 
 .mininoticias {
-  display: flex;
+  display: grid;
+  max-width: 1170px;
   padding-left: 135px;
   padding-right: 135px;
   margin-top: 64px;
   margin-bottom: 50px;
+
+  grid-template-areas: 'li li li';
 }
 
 .mininoticias li {
@@ -265,15 +287,21 @@ button:hover {
 
 footer {
   align-items: center;
+  display: grid;
+  grid-template-columns: 'meios logo';
 }
 
 .contato {
   display: flex;
   background-color: var(--purple-bg);
   color: white;
-  padding: 40px 135px;
-  justify-content: space-between;
+  width: 1170px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 135px;
+
   align-items: center;
+  justify-content: space-between;
 }
 
 .contato .meios h2 {
@@ -319,4 +347,5 @@ footer {
 
 .contato .logo {
   margin-top: 80px;
+  padding-right: 20px;
 }
